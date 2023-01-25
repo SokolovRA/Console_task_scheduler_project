@@ -18,7 +18,7 @@ public class TaskServis {
 
     }
 
-    public Task remove(int id) throws TaskNotFoundException {
+    public Task remove(int id)  {
         if (taskMap.containsKey(id)) {
             Task task1 = taskMap.get(id);
             removedTask.add(task1);

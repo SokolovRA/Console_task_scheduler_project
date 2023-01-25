@@ -7,7 +7,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class DailyTask extends Task{
-    public DailyTask(String title, String deskription, Type type, LocalDateTime dateTime) throws IncorrectArgumentException {
+    public DailyTask(String title, String deskription, Type type, LocalDateTime dateTime)  {
         super(title, deskription, type, dateTime);
     }
 

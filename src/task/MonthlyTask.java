@@ -5,12 +5,12 @@ import exception.IncorrectArgumentException;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.temporal.ChronoUnit;
+
 
 
 public class MonthlyTask extends Task {
 
-    public MonthlyTask(String title, String deskription, Type type, LocalDateTime dateTime) throws IncorrectArgumentException {
+    public MonthlyTask(String title, String deskription, Type type, LocalDateTime dateTime) {
         super(title, deskription, type, dateTime);
     }
 

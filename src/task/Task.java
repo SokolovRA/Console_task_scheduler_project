@@ -23,6 +23,9 @@ public abstract class Task {
         this.type = type;
         this.id = ++idGenerator;
         this.dateTime = dateTime;
+        if (dateTime.isBefore(LocalDateTime.now())){
+            throw new IncorrectArgumentException("Дата не корректна");
+        }
         this.deskription = deskription;
     }
 
@@ -50,14 +53,14 @@ public abstract class Task {
         if (title != null && !title.isBlank() && !title.isEmpty()) {
             this.title = title;
         } else {
-                throw new IncorrectArgumentException(" Некорректный ввод ",title);
-            }
+            throw new IncorrectArgumentException(" Некорректный ввод ");
         }
+    }
     public void setDeskription(String deskription) throws IncorrectArgumentException {
         if (deskription != null && !deskription.isBlank() && !deskription.isEmpty()) {
             this.deskription = deskription;
         } else {
-            throw new IncorrectArgumentException(" Некорректный ввод ",deskription);
+            throw new IncorrectArgumentException(" Некорректный ввод ");
         }
     }
 
