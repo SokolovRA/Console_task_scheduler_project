@@ -1,10 +1,9 @@
 package exception;
 
-public class IncorrectArgumentException extends Exception{
-public String argument;
+public class IncorrectArgumentException extends RuntimeException{
+    public String argument;
 
-    public IncorrectArgumentException(String message, String argument) {
-        super(message);
+    public IncorrectArgumentException(String argument) {
         this.argument = argument;
     }
 }
